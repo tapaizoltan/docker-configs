@@ -1,0 +1,4 @@
+docker pull jellyfin/jellyfin
+docker volume create jellyfin-config
+docker volume create jellyfin-cache
+docker run -d --name jellyfin -p 8096:8096 --volume jellyfin-config:/config --volume jellyfin-cache:/cache --mount type=bind,source=/home/tapaizoltan/jellymedia,target=/media --restart=unless-stopped jellyfin/jellyfin
