@@ -1,1 +1,1 @@
-docker run -d -p 8000:8000/tcp qmcgaw/stackedit
+docker run --name stackedit -d -p 8000:8000/tcp --network stack-mysql qmcgaw/stackedit
