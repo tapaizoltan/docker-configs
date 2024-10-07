@@ -2,7 +2,7 @@
 docker volume create mosquitto
 
 (2) Első indítás:
-docker run --name mqtt -d -p 1883:1883 -p 9001:9001 -v mosquitto:/mosquitto/config -v mosquitto:/mosquitto/data -v mosquitto:/mosquitto/log eclipse-mosquitto
+docker run --name mqtt -d -p 1883:1883 -p 9001:9001 -v mosquitto:/mosquitto/config -v mosquitto:/mosquitto/data -v mosquitto:/mosquitto/log --network stack-mysql eclipse-mosquitto
 
 (3) Mosquitto config szerkesztése:
 Bele kell rakni a /mosquitto/config/mosquitto.conf fájlba:
